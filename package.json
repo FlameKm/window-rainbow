@@ -3,7 +3,7 @@
   "displayName": "Window Rainbow",
   "description": "Automatic set titlebar, activitybar and sidebar color",
   "publisher": "Gyteng",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "engines": {
     "vscode": "^1.87.0"
   },
@@ -103,8 +103,5 @@
     "esbuild": "^0.20.2",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "js-md5": "^0.8.3"
   }
 }
