@@ -1,9 +1,18 @@
-import { md5 } from 'js-md5';
+const simpleHash = (str: string): string => {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash;
+  }
+  const hexHash = Math.abs(hash).toString(16).padStart(6, '0');
+  return hexHash.substring(0, 6);
+};
 
 const toHex = (decimal: number): string => decimal.toString(16).padStart(2, '0');
 
 const generateRandomColor = (seed: string): string => {
-  const hash = md5(seed);
+  const hash = simpleHash(seed);
   const r = parseInt(hash.substring(0, 2), 16);
   const g = parseInt(hash.substring(2, 4), 16);
   const b = parseInt(hash.substring(4, 6), 16);
