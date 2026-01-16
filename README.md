@@ -1,3 +1,3 @@
 # Window Rainbow
 
-Automatic set titlebar, activitybar and sidebar color.
+Automatic set titlebar, activitybar, sidebar and statusbar color.

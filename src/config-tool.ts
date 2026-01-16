@@ -9,7 +9,7 @@ interface SeedConfig {
 
 interface ControlsConfig {
   mode: 'auto' | 'manual';
-  color: Array<'titleBar' | 'activityBar' | 'sideBar'>;
+  color: Array<'titleBar' | 'activityBar' | 'sideBar' | 'statusBar'>;
 }
 
 const getSeedConfig = (): SeedConfig => {
@@ -78,6 +78,7 @@ const setColors = (colors: Array<string>) => {
     'titleBar.activeBackground': controlsConfig.color.includes('titleBar') ? colors[0] : undefined,
     'activityBar.background': controlsConfig.color.includes('activityBar') ? colors[1] : undefined,
     'sideBar.background': controlsConfig.color.includes('sideBar') ? colors[2] : undefined,
+    'statusBar.background': controlsConfig.color.includes('statusBar') ? colors[3] : undefined,
   }, vscode.ConfigurationTarget.Workspace);
 };
 
