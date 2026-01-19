@@ -1,7 +1,7 @@
 {
   "name": "window-rainbow",
   "displayName": "Window Rainbow",
-  "description": "Automatic set titlebar, activitybar and sidebar color",
+  "description": "Automatic set titlebar, activitybar, sidebar and statusbar color",
   "publisher": "Gyteng",
   "version": "0.0.14",
   "engines": {
@@ -78,7 +78,8 @@
             "enum": [
               "titleBar",
               "activityBar",
-              "sideBar"
+              "sideBar",
+              "statusBar"
             ]
           },
           "default": [

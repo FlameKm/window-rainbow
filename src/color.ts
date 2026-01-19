@@ -23,6 +23,7 @@ const toDarkColor = (color: string): string[] => {
   const changeColor0 = (code: number) => parseInt((code / 8 + 60).toString());
   const changeColor1 = (code: number) => parseInt((code / 8 + 48).toString());
   const changeColor2 = (code: number) => parseInt((code / 8 + 36).toString());
+  const changeColor3 = (code: number) => parseInt((code / 8 + 24).toString());
   const r = parseInt(color.substring(1, 3), 16);
   const g = parseInt(color.substring(3, 5), 16);
   const b = parseInt(color.substring(5, 7), 16);
@@ -30,6 +31,7 @@ const toDarkColor = (color: string): string[] => {
     `#${toHex(changeColor0(r))}${toHex(changeColor0(g))}${toHex(changeColor0(b))}` + 'dd',
     `#${toHex(changeColor1(r))}${toHex(changeColor1(g))}${toHex(changeColor1(b))}` + 'aa',
     `#${toHex(changeColor2(r))}${toHex(changeColor2(g))}${toHex(changeColor2(b))}` + '33',
+    `#${toHex(changeColor3(r))}${toHex(changeColor3(g))}${toHex(changeColor3(b))}` + '88',
   ];
 };
 
@@ -37,6 +39,7 @@ const toLightColor = (color: string): string[] => {
   const changeColor0 = (code: number) => parseInt((255 - 60 - code / 8).toString());
   const changeColor1 = (code: number) => parseInt((255 - 48 - code / 8).toString());
   const changeColor2 = (code: number) => parseInt((255 - 36 - code / 8).toString());
+  const changeColor3 = (code: number) => parseInt((255 - 24 - code / 8).toString());
   const r = parseInt(color.substring(1, 3), 16);
   const g = parseInt(color.substring(3, 5), 16);
   const b = parseInt(color.substring(5, 7), 16);
@@ -44,6 +47,7 @@ const toLightColor = (color: string): string[] => {
     `#${toHex(changeColor0(r))}${toHex(changeColor0(g))}${toHex(changeColor0(b))}` + 'dd',
     `#${toHex(changeColor1(r))}${toHex(changeColor1(g))}${toHex(changeColor1(b))}` + 'aa',
     `#${toHex(changeColor2(r))}${toHex(changeColor2(g))}${toHex(changeColor2(b))}` + '33',
+    `#${toHex(changeColor3(r))}${toHex(changeColor3(g))}${toHex(changeColor3(b))}` + '88',
   ];
 };
 
