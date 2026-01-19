@@ -2,14 +2,14 @@
   "name": "window-rainbow",
   "displayName": "Window Rainbow",
   "description": "Automatic set titlebar, activitybar, sidebar and statusbar color",
-  "publisher": "Gyteng",
+  "publisher": "flamekm",
   "version": "0.0.14",
   "engines": {
     "vscode": "^1.87.0"
   },
   "icon": "images/icon.png",
   "repository": {
-    "url": "https://github.com/gyteng/window-rainbow"
+    "url": "https://github.com/flamekm/window-rainbow"
   },
   "categories": [
     "Themes",
