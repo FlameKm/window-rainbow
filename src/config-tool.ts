@@ -73,9 +73,11 @@ const setColors = (colors: Array<string>) => {
   let config = vscode.workspace.getConfiguration('workbench');
   const controlsConfig = getControlsConfig();
   const colorCustomizations = JSON.parse(JSON.stringify(config.get('colorCustomizations')));
+  const titleBarColor = controlsConfig.color.includes('titleBar') ? colors[0] : undefined;
   config.update('colorCustomizations', {
     ...colorCustomizations,
-    'titleBar.activeBackground': controlsConfig.color.includes('titleBar') ? colors[0] : undefined,
+    'titleBar.activeBackground': titleBarColor,
+    'titleBar.inactiveBackground': titleBarColor,
     'activityBar.background': controlsConfig.color.includes('activityBar') ? colors[1] : undefined,
     'sideBar.background': controlsConfig.color.includes('sideBar') ? colors[2] : undefined,
     'statusBar.background': controlsConfig.color.includes('statusBar') ? colors[3] : undefined,
